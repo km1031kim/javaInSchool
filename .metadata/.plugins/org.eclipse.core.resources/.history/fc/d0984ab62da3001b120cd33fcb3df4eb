@@ -1,0 +1,87 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ExeClass {
+	public static void main(String[] args) {
+		ArrayList<Customer> c1 = new ArrayList<Customer>();
+		ArrayList<Score> s1 = new ArrayList<Score>();
+		Scanner s = new Scanner(System.in);
+		for (int i = 0; i < 999; i++) {
+			System.out.println("메뉴를 입력해주세요\n" + "1. 고객정보 입력\n" + "2. 고객정보 출력\n" + "3. 고객 별점 입력\n" + "4. 별점 출력\n"
+					+ "stop. 시스템 종료\n");
+
+			String menu = s.nextLine();
+
+			if (menu.equals("1")) {
+				System.out.println("고객 정보를 입력합니다.\n" + "고객 이름을 입력해주세요");
+				String name = s.nextLine();
+				System.out.println("고객의 휴대폰 번호를 입력해주세요");
+				String phoneNumber = s.nextLine();
+				String alreadyExist = "";
+
+				for (int j = 0; j < c1.size(); j++) {
+					if (c1.get(j).phoneNumber.equals(phoneNumber)) {
+						alreadyExist = phoneNumber;
+					}
+				}
+				if (alreadyExist.equals("")) {
+					c1.add(new Customer(name, phoneNumber));
+					System.out.println("고객 정보 추가 완료");
+				} else System.out.println("이미 등록된 고객입니다.");
+
+				
+			} else if (menu.equals("2")) {
+				System.out.println("고객 정보를 출력합니다");
+
+				for (int j = 0; j < c1.size(); j++) {
+					System.out.println(c1.get(j).name + "님의 휴대폰 번호는" + " " + c1.get(j).phoneNumber + "입니다");
+					continue;
+				}
+
+			} else if (menu.equals("3")) {
+				System.out.println("별점을 입력합니다\n고객의 휴대폰 번호를 입력하세요");
+				String name = "";
+				String phoneNumber = "";
+				String number = s.nextLine();
+				for (int j = 0; j < c1.size(); j++) {
+					if (c1.get(j).phoneNumber.equals(number)) {
+						name = c1.get(j).name;
+						phoneNumber = c1.get(j).phoneNumber;
+
+					}
+
+				}
+				if (name.equals("")) {
+					System.out.println("해당 고객이 없습니다");
+					continue;
+				} else {
+					System.out.println(name + "님 환영합니다. 별점을 입력해주세요.(1~5점)");
+					String starString = s.nextLine();
+					int star = Integer.parseInt(starString);
+					s1.add(new Score(name, phoneNumber, star));
+					System.out.println("별점 입력 완료.");
+					continue;
+				}
+
+			} else if (menu.equals("4")) {
+				System.out.println("별점을 출력합니다");
+				int starTotal = 0;
+				for (int j = 0; j < s1.size(); j++) {
+					starTotal = starTotal + s1.get(j).star;
+					System.out.println(s1.get(j).name + "님의 별점은" + " " + s1.get(j).star + "점 입니다");
+				}
+				System.out.println("현재 별점의 평균은" + " "
+						+ Math.round((starTotal / (double) s1.size()) * 100) / (double) 100 + "점 입니다.");
+			}
+
+			else if (menu.equals("stop")) {
+				System.out.println("시스템을 종료합니다");
+				break;
+			} else
+				System.out.println("올바른 값을 다시 입력해주세요.");
+			continue;
+
+		}
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;stesp2&apos; to &apos;step2&apos;&#x0D;&#x0A;- Original project: &apos;1학기 중간고사&apos;&#x0D;&#x0A;- Original element: &apos;1학기 중간고사/src/stesp2&apos;&#x0D;&#x0A;- Renamed element: &apos;1학기 중간고사/src/step2&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;stesp2&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;stesp2" name="step2" qualified="false" references="true" stamp="1618876337705" textual="false" version="1.0"/>
+</session>

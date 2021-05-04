@@ -1,0 +1,31 @@
+	public class SooJinEnemy extends Enemy { // 1208호 2조 고수진
+		   public SooJinEnemy(String name) { // 이름 : 자바최고
+		      this.hp = 150;
+		      this.power = 7;
+		      this.defense = 2;
+		      this.name = name;
+		   }   
+		      
+		      @Override
+		      public void attack(Base player) {
+		         int damage = 0;
+		         
+		         if(player.hp < 50) { // player의 hp가 50보다 클 때
+		            damage = this.power - player.defense;
+		            player.hp = player.hp - 2*damage;
+		            System.out.println(this.name + "은(는)" + player.name + "에게" + 2*damage + "의 피해를 입혔다." );
+		         }
+		         
+		         else { // player의 hp가 50보다 작을 때
+		        	 damage = this.power - player.defense;
+		         System.out.println(this.name + "은(는)" + player.name + "에게" + damage + "의 피해를 입혔다." );
+		         }
+		         if(!player.isLive()) {
+		            System.out.println(this.name+"은(는)" + player.name + "을(를) 파괴했다.");
+		         
+		      }
+		      
+		   }
+		}
+
+

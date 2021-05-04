@@ -1,0 +1,69 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Quiz2 {
+	public static void main(String[] args) throws FileNotFoundException {
+		System.setIn(new FileInputStream("E://input3.txt"));
+
+		Scanner s = new Scanner(System.in);
+
+		// 총 더할 횟수는 gameCount
+		int gameCount = s.nextInt();
+		System.out.println(gameCount);
+
+		// 첫번째 숫자는 총 더할 숫자의 갯수
+
+		int sumNumber = s.nextInt();
+
+		// 나머지 숫자는 sumNumber로 반복해서 받아오자 일단.
+		int[] arr = new int[sumNumber];
+
+		for (int i = 0; i < sumNumber; i++) {
+			arr[i] = s.nextInt();
+
+		}
+		// 출력해보자 일단
+		System.out.println(Arrays.toString(arr));
+
+		
+		// 출력 완료, 배열해보자, 중복된 숫자는 제거하자
+
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[i] > arr[j]) {
+					int temp = 0;
+					temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+
+				}
+
+			}
+
+		}
+		System.out.println(Arrays.toString(arr));
+
+		// 중복된 값을 제거해보자.
+
+		
+		for (int i = 0; i < arr.length+1; i++) {
+			 
+				if (arr[i] != arr[i+1]) {
+
+					{ System.out.print(arr[i] + " ");
+					
+				if(i == arr.length-1) {
+						System.out.print(arr[i]);
+					}
+						
+					
+
+				}
+
+			}
+			
+		}
+	}
+}

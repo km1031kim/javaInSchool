@@ -1,0 +1,28 @@
+public class SooJinPlayer extends Player{ // 1208호 2조 고수진
+   public SooJinPlayer(String name) { // 이름 : 찐고수
+      this.hp = 170;
+      this.power = 10;
+      this.defense = 2;
+      this.name = name;
+      
+   }
+   
+   @Override
+   public void attack(Base enemy) {
+       
+	   int damage = 0;
+      if(enemy.hp > this.hp) { // enemy의 hp가 내 hp 보다 클 때
+       damage = this.power - enemy.defense;
+       enemy.hp = enemy.hp - 4*damage;
+       System.out.println(this.name + "은(는)" + enemy.name + "에게" + 4*damage + "의 피해를 입혔다.");
+      }
+      else { // enemy의 hp가 내hp보다 작을 때
+    	  damage = this.power - enemy.defense;
+      System.out.println(this.name + "은(는)" + enemy.name + "에게" + damage + "의 피해를 입혔다.");
+      }
+      if(!enemy.isLive()) {
+         System.out.println(this.name+"은(는)" + enemy.name + "을(를) 파괴했다.");
+      }
+   }
+
+}

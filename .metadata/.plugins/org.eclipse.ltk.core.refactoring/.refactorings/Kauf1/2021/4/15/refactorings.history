@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;03. 객체지향 프로그래밍/src/method&apos;&#x0D;&#x0A;- Original project: &apos;Kauf1&apos;&#x0D;&#x0A;- Destination element: &apos;03. 객체지향 프로그래밍/src/method&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     KaufMethod2.java&#x0D;&#x0A;     Kauf2.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="=03. 객체지향 프로그래밍/src&lt;method" element1="/src&lt;{KaufMethod2.java" element2="/src&lt;{Kauf2.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1617780693888" units="2" version="1.0"/>
+</session>

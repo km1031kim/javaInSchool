@@ -1,0 +1,37 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Quiz5_HJ {
+	public static void main(String[] args) throws IOException {
+		// 25인승 버스와 45인승 버스.. 최댓값을 먼저 구해서 제일 비쌀 때 금액을 구하고, 반복문을 돌면서 그 최댓값을 줄여나가자.
+
+		// 총 인원수를 받아오자.
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int people = Integer.parseInt(br.readLine());
+
+		// 해당 값에 대해서, 최대로 많이 드는 비용을 계산해보자.
+		// 100명일때
+		
+		int bus45cnt = (people / 45) + 1; // 45인승으로 최대.
+		int bus25cnt = (people / 25) + 1; // 25인승으로 최대.
+
+		
+
+		int minPrice = bus45cnt * 45; // 최대값
+		int sum = 0; // 최댓값과 비교할 수.
+		
+		for (int i = 0; i <= bus45cnt; i++) {
+			for (int j = 0; j <= bus25cnt; j++) {
+				sum = 45*i + 25*j;
+				if(sum>=people && sum < minPrice) {
+				System.out.println(""+ i + " " + j);
+				}
+				
+			}
+		}
+	
+
+	}
+
+}

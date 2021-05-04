@@ -1,0 +1,106 @@
+
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class noRandomSort_Selection {
+        public static void main(String[] args) {
+                
+
+                
+        int noRandom[] = new int[20];
+        
+        Random r = new Random();
+        
+        //랜덤값 10 개 받아서 리스트에 넣는데, 중복값이 없게 해보자
+        
+        for(int i = 0; i < noRandom.length; i++) {
+                noRandom[i] = r.nextInt(20)+1;
+                for(int j = 0; j < i; j++) {
+                        if(noRandom[i] == noRandom[j]) {
+                                noRandom[i] = r.nextInt(20)+1;
+                               i = i-1;
+                                 // 중복값이 제거되는 과정을 볼 수 있다.
+                        }
+                        
+                }
+        }
+        
+        System.out.println(Arrays.toString(noRandom));
+        
+        
+        // 선택정렬로 오름차순 하자.
+        
+        for(int i = 0; i < noRandom.length-1; i++) {
+                for(int j = i+1; j< noRandom.length; j++) {
+                        
+                        if(noRandom[i] > noRandom[j]) {
+                                int temp = 0;
+                                temp = noRandom[i];
+                                noRandom[i] = noRandom[j];
+                                noRandom[j] = temp;
+                                
+                        }
+                        
+                }
+        }
+        System.out.println(Arrays.toString(noRandom));
+        
+        
+        }
+
+
+}
+
+
+
+
+-- 버블 / 내림차순 --
+import java.util.Arrays;
+import java.util.Random;
+
+public class noRandomSort_Bubble {
+        public static void main(String[] args) {
+
+                
+                int noRandom[] = new int[20];
+                
+                Random r = new Random();
+                
+                //랜덤값 10 개 받아서 리스트에 넣는데, 중복값이 없게 해보자
+                
+                for(int i = 0; i < noRandom.length; i++) {
+                        noRandom[i] = r.nextInt(20)+1;
+                        for(int j = 0; j < i; j++) {
+                                if(noRandom[i] == noRandom[j]) {
+                                        noRandom[i] = r.nextInt(20)+1;
+                                         i = i-1;
+                                         // 중복값이 제거되는 과정을 볼 수 있다.
+                                }
+                                
+                        }
+                }
+                
+                System.out.println(Arrays.toString(noRandom));
+                
+                //버블소트로 내림차순 해보자
+                
+                for(int i = 0; i < noRandom.length-1; i++) {
+                        for(int j = 0; j < noRandom.length-1-i; j++) {
+                                if(noRandom[j] < noRandom[j+1]) {
+                                        int temp = 0;
+                                        temp = noRandom[j];
+                                        noRandom[j] = noRandom[j+1];
+                                        noRandom[j+1] = temp;
+                                        System.out.println(Arrays.toString(noRandom));
+                                }
+                        }
+                } 
+        }
+        
+
+}
+
+
+
+

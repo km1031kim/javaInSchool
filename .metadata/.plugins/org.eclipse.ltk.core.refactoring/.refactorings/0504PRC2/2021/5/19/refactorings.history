@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 3 elements to &apos;06. 연습문제/src/memberManage&apos;&#x0D;&#x0A;- Original project: &apos;0504PRC2&apos;&#x0D;&#x0A;- Destination element: &apos;06. 연습문제/src/memberManage&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     ExecClass.java&#x0D;&#x0A;     People.java&#x0D;&#x0A;     Party.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="=06. 연습문제/src&lt;memberManage" element1="/src&lt;{ExecClass.java" element2="/src&lt;{People.java" element3="/src&lt;{Party.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1620121965861" units="3" version="1.0"/>
+</session>

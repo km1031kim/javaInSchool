@@ -1,0 +1,15 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Quiz2 {
+	public static void main(String[] args) throws FileNotFoundException {
+		System.setIn(new FileInputStream("E://input3.txt"));
+		
+		Scanner s = new Scanner(System.in);
+		
+		int gameCount = s.nextInt();
+		System.out.println(gameCount);
+		
+	}
+}

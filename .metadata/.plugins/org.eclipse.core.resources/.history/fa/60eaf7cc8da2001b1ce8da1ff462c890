@@ -1,0 +1,7 @@
+
+public class Evaluation {
+	String phoneNumber;
+	String name;
+	int starCount;
+
+}

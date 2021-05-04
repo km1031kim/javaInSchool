@@ -1,0 +1,12 @@
+
+public class Evaluation {
+	String phone;
+	String name;
+	int star;
+	
+	Evaluation(String phoneNumber, String phone){
+		this.phone = phoneNumber;
+		this.phone = phone;
+	}
+
+}

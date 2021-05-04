@@ -1,0 +1,34 @@
+
+public class Customer {
+	
+	String name;
+	String phoneNumber;
+	int starCount;
+	int totalStar;
+	
+
+	// 입력 받는 부분
+	Customer(String name, String phoneNumber, int starCount){
+		this.name = name;
+		this.phoneNumber = phoneNumber;
+		this.starCount = starCount;
+		this.totalStar = totalStar + starCount;
+		
+		
+	}
+	
+	public void calcStar() {
+		this.totalStar = this.totalStar + this.starCount;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+}

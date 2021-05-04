@@ -1,0 +1,37 @@
+public class RaegunPlayer extends Player {
+public RaegunPlayer() {//자바
+	   this.hp = 100;
+	      this.power = 10;
+	      this.defense = 2;
+	      this.name = name;
+}
+   
+   @Override
+   public void attack(Base enemy) {
+      if(enemy.hp>150) {
+         int damage = this.power*2-enemy.defense;
+         enemy.hp = enemy.hp -damage;
+         System.out.println(this.name + "은(는) 날뛰며 " + enemy.name + "에게 2배의 " + damage + "의 피해를 입혔다.");
+         if(!enemy.isLive()) {
+            System.out.println(this.name+"은"+enemy.name+"을 파괴했다");
+         }
+         }
+      else if(enemy.hp >100) {
+      int damage = this.power - enemy.defense;
+      enemy.hp = enemy.hp - damage;
+      this.hp= this.hp+this.defense;
+      System.out.println(this.name + "은(는) " + enemy.name + "에게 " + damage + "의 피해를 입혔고 hp가"+defense+"만큼 올랐습니다.");
+      if(!enemy.isLive()) {
+         System.out.println(this.name+"은"+enemy.name+"을 파괴했다");
+      }
+      }
+      else {
+         int damage= this.power -enemy.defense;
+         enemy.hp= enemy.hp-damage;
+         System.out.println(this.name + "은(는) " + enemy.name + "에게 " + damage + "의 피해를 입혔다.");
+         if(!enemy.isLive()) {
+            System.out.println(this.name+"은"+enemy.name+"을 파괴했다");
+         }
+      }
+}
+}

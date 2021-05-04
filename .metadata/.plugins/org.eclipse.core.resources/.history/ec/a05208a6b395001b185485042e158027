@@ -1,0 +1,35 @@
+import java.util.Arrays;
+import java.util.Random;
+
+public class Randsort {
+	public static void main(String[] args) {
+		//랜덤 수 먼저 뽑자
+		
+		Random r = new Random();
+		int randNum = r.nextInt(100)+1;
+		int[] randlist = new int[20]; 
+		
+		for(int i = 0; i<20; i++) {
+			int randNum1 = r.nextInt(100)+1;
+			randlist[i] = randNum1;
+		}
+		
+		System.out.println(Arrays.toString(randlist));
+		
+		for(int j = 0; j < randlist.length-1; j++) {
+			for(int k = j+1; k < randlist.length; k++) {
+				if(k>j) {
+					int temp = 0;
+					temp = randlist[j];
+					randlist[j] = randlist[k];
+					randlist[k] = temp;
+				}
+			}
+		}
+		System.out.println(Arrays.toString(randlist));
+	} 
+	
+
+
+
+}

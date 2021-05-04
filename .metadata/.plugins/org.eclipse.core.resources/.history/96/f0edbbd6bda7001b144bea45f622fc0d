@@ -1,0 +1,56 @@
+package array;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class BJ_1619 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Random r = new Random();
+		int dotCount = sc.nextInt();
+
+		int[][] arr = new int[10][10];
+		int randX = 0;
+		int randY = 0;
+		int cnt = 1;
+		for (int i = 0; i < dotCount; i++) {
+			randX = r.nextInt(10);
+			randY = r.nextInt(10);
+			arr[randX][randY] = cnt;
+			cnt++;
+		}
+
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				if (arr[i][j] != 0) {
+					for (int k = 0; k < arr.length; k++) {
+						for (int z = 0; z < arr[k].length; z++) {
+							if (arr[k][z] != arr[i][j] && arr[k][z] != 0) {
+								// i j 랑 k z 랑 가로 세로 대각선 중 한가지 조건에 겹쳐야 한다.
+								if (k == i) {
+									// 가로로 선을 이었을 때
+									
+								} else if (z == j) {
+									// 세로로 선을 이었을 때
+								} else if (Math.abs((double) k - i / (double) z - j) == 1.0) {
+									// 대각선으로 선을 이었을 때
+
+								}
+
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}
+
+}

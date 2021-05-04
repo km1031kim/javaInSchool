@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 7 elements to &apos;03. 객체지향 프로그래밍/src/method&apos;&#x0D;&#x0A;- Original project: &apos;Exercise0405&apos;&#x0D;&#x0A;- Destination element: &apos;03. 객체지향 프로그래밍/src/method&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Base.java&#x0D;&#x0A;     cir.java&#x0D;&#x0A;     parl.java&#x0D;&#x0A;     rhom.java&#x0D;&#x0A;     Main.java&#x0D;&#x0A;     rect.java&#x0D;&#x0A;     tri.java" description="Copy compilation units" destination="=03. 객체지향 프로그래밍/src&lt;method" element1="/src&lt;{Base.java" element2="/src&lt;{cir.java" element3="/src&lt;{parl.java" element4="/src&lt;{rhom.java" element5="/src&lt;{Main.java" element6="/src&lt;{rect.java" element7="/src&lt;{tri.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1617779855252" units="7" version="1.0"/>
+</session>

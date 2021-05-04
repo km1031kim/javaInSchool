@@ -1,0 +1,31 @@
+package array;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class BJ_1619 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Random r = new Random();
+		int dotCount = sc.nextInt();
+		
+		int[][] arr = new int[10][10];
+		int randX = 0;
+		int randY = 0;
+		
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < arr[i].length; j++) {
+				randX = r.nextInt(10);
+				randY = r.nextInt(10);
+				arr[randX][randY] = 1;
+			}
+		}
+		
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j <arr[i].length; j++) {
+				System.out.print(arr[i][j] +  " ");
+			}System.out.println();
+		} 
+	}
+
+}
