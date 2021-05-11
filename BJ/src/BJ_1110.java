@@ -16,30 +16,30 @@ public class BJ_1110 {
 
 		int leftnum = 0; // 왼쪽 수
 		int rightnum = 0; // 오른쪽 수
-		String defalut = userInput;
-		if (userInput.split("").length == 1) {
-			defalut = ("" + 0 + userInput);
-			userInput = defalut;
+		String defalut = userInput; // 처음 받은 문자(두자리 수) 를 default에 넣는다.
+		if (userInput.split("").length == 1) { // 10보다 작은 수일 경우. 
+			defalut = ("" + 0 + userInput); // 0앞에 0을 더한, 숫자의 형태를 한 문자로 만들어준다. ex) "6" -> "06" 
+			userInput = defalut; // 그러구나서 userInput 바꿔주기. ex) "6" -> "06" 
 
 		} 
 
-		int cnt = 0;
+		int cnt = 0; // 몇 번에 걸쳐 원래의 수로 돌아오는지 cnt
 
 		while (true) {
 
 			String[] arr = defalut.split("");
-			leftnum = Integer.parseInt(arr[0]);
-			rightnum = Integer.parseInt(arr[1]);
-			if (leftnum + rightnum < 10) {
+			leftnum = Integer.parseInt(arr[0]); // 왼쪽 수 int 치환
+			rightnum = Integer.parseInt(arr[1]); // 오른쪽 수 int 치환.
+			if (leftnum + rightnum < 10) { // 왼쪽과 오른쪽을 더했을 때, 두 수의 합이 10보다 작은 경우.
 				defalut = ("" + rightnum + (leftnum + rightnum));
 				cnt++;
 
-			} else {
+			} else {	 // 왼쪽과 오른쪽을 더했을 때, 두 수의 합이 10보다 큰 경우는 그냥 10 빼서 오른쪽 수만 가져온다.
 				defalut = ("" + rightnum + (leftnum + rightnum - 10));
 				cnt++;
 			}
 
-			if (defalut.equals(userInput)) {
+			if (defalut.equals(userInput)) { // 처음 수와 같아지면 break;
 				break;
 			}
 
