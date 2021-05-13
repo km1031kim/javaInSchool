@@ -38,4 +38,7 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="org.sqlite.core.DB"/>
+    <fullyQualifiedTypeName name="com.kopo.first.DBCommon"/>
+    <fullyQualifiedTypeName name="com.kopo.student.DBCommon"/>
 </qualifiedTypeNameHistroy>
