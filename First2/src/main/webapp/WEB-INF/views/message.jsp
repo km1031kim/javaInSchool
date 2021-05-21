@@ -11,7 +11,7 @@
 <body>
     <section class="wrap" style="width: 60%; margin: 0 auto; padding: 50px;">
         <p style="padding: 20px; background: #eee; border-radius: 5px; text-align: center;">
-            테이블 생성 완료
+            ${msg }
         </p>
     </section>
 </body>

@@ -4,6 +4,7 @@ public class Student {
 	int idx;  // 고유값
 	String name;
 	int score;
+	String created;
 	
 	
 	
@@ -11,9 +12,11 @@ public class Student {
 		
 	}
 	
-	Student(String name, int score){
+	Student(String name, int score, String created){
 		this.name = name;
 		this.score = score;
+		this.created = created;
+		
 	}
 
 }

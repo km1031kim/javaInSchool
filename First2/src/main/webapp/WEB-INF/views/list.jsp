@@ -16,26 +16,7 @@
   <section class="wrap">
     <table>
       <thead>
-        <tr>
-          <th>idx</th>
-          <th>이름</th>
-            <th>점수</th>
-            <th>생성일</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>홍길동</td>
-          <td>100</td>
-          <td>2020-01-01</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>둘리</td>
-          <td>30</td>
-          <td>2020-01-01</td>
-        </tr>
+        ${list}
       </tbody>
       </table>
   </section>
