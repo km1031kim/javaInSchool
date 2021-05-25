@@ -22,11 +22,15 @@ public class DBCommon<T> { // DB다. 테이블생성, 인서트 등 가능.
 		this.dbFileName = dbFileName;
 		this.tableName = tableName;
 	}
-
-	private void open() {
+	
+	// 모든 외부 연결은
+	// 오픈, 사용, 클로즈로 진행
+	// ( 이유 ) 현재 사용하고 있는 프로그램이 해당 파일 또는 장치를 점유하고 있기 때문에.
+	
+	private void open() { // open 하고 close
 		try {
-			Class.forName("org.sqlite.JDBC");
-			SQLiteConfig config = new SQLiteConfig();
+			Class.forName("org.sqlite.JDBC"); // sqllite jdbc  -  db 접속.
+			SQLiteConfig config = new SQLiteConfig(); // config 생성
 			this.connection = DriverManager.getConnection("jdbc:sqlite:/" + this.dbFileName, config.toProperties());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -34,9 +38,9 @@ public class DBCommon<T> { // DB다. 테이블생성, 인서트 등 가능.
 	}
 
 	private void close() {
-		if (this.connection != null) {
+		if (this.connection != null) { //null 이 아닌 경우
 			try {
-				this.connection.close();
+				this.connection.close(); // 종료
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -68,10 +72,10 @@ public class DBCommon<T> { // DB다. 테이블생성, 인서트 등 가능.
 					query = query + fieldName + " TEXT";
 				} 
 			}
-			if (this.connection == null) {
+			if (this.connection == null) { // 쿼리 실행 전 db 오픈
 				this.open();
 			}
-			query = "CREATE TABLE " + this.tableName + "(" + query + ");";
+			query = "CREATE TABLE " + this.tableName + "(" + query + ");"; // 쿼리 실행
 			Statement statement = this.connection.createStatement();
 			int result = statement.executeUpdate(query);
 			statement.close();
@@ -80,7 +84,7 @@ public class DBCommon<T> { // DB다. 테이블생성, 인서트 등 가능.
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			this.close();
+			this.close(); // 클로즈
 		}
 	}
 

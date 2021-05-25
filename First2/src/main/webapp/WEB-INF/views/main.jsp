@@ -17,9 +17,9 @@
   <section class="wrap">
     <a href="list">목록 보기</a>
     <a href="insert">테이블 입력</a>
-    <a href="create_table">테이블 생성</a>
+    <a href="create_table">테이블 생성</a>   
   </section>
-  <!-- 주석 -->
+  <!-- 주석 --> <!-- - -->
 </body>
 
 </html>

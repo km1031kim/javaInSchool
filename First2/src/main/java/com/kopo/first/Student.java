@@ -3,7 +3,8 @@ package com.kopo.first;
 public class Student {
 	int idx;  // 고유값
 	String name;
-	int score;
+	double middleScore;
+	double finalScore;
 	String created;
 	
 	
@@ -12,9 +13,11 @@ public class Student {
 		
 	}
 	
-	Student(String name, int score, String created){
+	Student(String name, double middlescore, double finalScore, String created){
+		this.idx = idx;
 		this.name = name;
-		this.score = score;
+		this.middleScore = middlescore;
+		this.finalScore = middlescore;
 		this.created = created;
 		
 	}
