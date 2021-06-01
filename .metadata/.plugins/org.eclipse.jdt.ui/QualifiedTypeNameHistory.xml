@@ -19,7 +19,6 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.io.StringReader"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-    <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
@@ -47,10 +46,11 @@
     <fullyQualifiedTypeName name="java.beans.Statement"/>
     <fullyQualifiedTypeName name="javax.servlet.jsp.jstl.sql.Result"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
 </qualifiedTypeNameHistroy>
