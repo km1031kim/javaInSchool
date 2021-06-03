@@ -111,5 +111,17 @@ public class HomeController {
 		return "message";
 	}
 	
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	public String deleteAction(Locale locale, Model model
+			, @RequestParam("idx") int idx
+			) {
+		
+		UserDB userDB = new UserDB();
+		userDB.deleteData(idx);
+
+		model.addAttribute("m1", "삭제완료");
+		return "message";
+	}
+	
 	
 }

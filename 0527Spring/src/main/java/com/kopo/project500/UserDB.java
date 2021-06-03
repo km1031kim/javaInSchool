@@ -160,4 +160,24 @@ public class UserDB {
 			e.printStackTrace();
 		}
 	}
+	
+	public void deleteData(int idx) {
+		try {
+			// open
+			Class.forName("org.sqlite.JDBC");
+			SQLiteConfig config = new SQLiteConfig();
+			Connection connection = DriverManager.getConnection("jdbc:sqlite:/" + "c:/tomcat/user.db", config.toProperties());			
+
+			String query = "DELETE FROM student WHERE idx=?";
+			PreparedStatement preparedStatement = connection.prepareStatement(query);
+			preparedStatement.setInt(1, idx);
+			int result = preparedStatement.executeUpdate();
+			preparedStatement.close();
+			
+			// close
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
