@@ -84,6 +84,7 @@ public class UserDB {
 	}
 
 	public String sha256(String msg) {
+		// 단방향 암호화.
 		try {
 			MessageDigest md = MessageDigest.getInstance("SHA-256");
 			md.update(msg.getBytes());
