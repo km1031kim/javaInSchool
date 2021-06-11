@@ -27,6 +27,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\PC01\Downloads\memoProgram2(userIdx형태로 수정)"/>
+			<item value="C:\Users\PC01\Downloads\Login_refined"/>
 			<item value="C:\Users\PC01\eclipse-workspace\LogIn"/>
 			<item value="C:\Users\PC01\Desktop\LogIn (2)"/>
 			<item value="C:\Users\PC01\eclipse-workspace\ProjectA"/>
