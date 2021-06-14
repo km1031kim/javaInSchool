@@ -1,0 +1,192 @@
+header {
+	padding-top: 30px;
+	padding-bottom: 20px;
+	text-align: center;
+	align-content: center;
+}
+
+.header-wrap a {
+	font-size: 3em;
+	background: #11111;
+	text-align: center;
+	color: #443252;
+}
+
+/* 네비게이션 바에 목록 구성하기s */
+nav ul {
+	width: 100%;
+	/* background-color: rgba(10, 42, 39, 0.983); */
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+/* 메뉴들이 나란히 나타날 수 있게 해주는 기능 */
+nav ul li {
+	display: inline-block;
+}
+
+/* 각 메뉴별로 공간이 나눠져 있는데, 각 공간의 사이즈 */
+.menu {
+	color: white;
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.menu a {
+	color: #0c2d45;
+	padding: 0px 35px;
+	text-decoration: none;
+	display: block;
+}
+
+.menu:hover:not(.home) {
+	background-color: #f6f6e9;
+	color: white;
+}
+
+/* div태그 메인 공간에 색깔 넣어둠 */
+.main_bottom {
+	margin: 30px;
+	padding: 10px 10px;
+	height: auto;
+	text-align: center;
+	background-image: linear-gradient(#d1e6c8 1.9000000000000001px, transparent
+		1.9000000000000001px),
+		linear-gradient(to right, #d1e6c8 1.9000000000000001px, #fdfdfd
+		1.9000000000000001px);
+	background-size: 38px 38px;
+}
+
+/* sign-up 내용 태그 */
+/*  form {
+	width: 50%;
+	height: 50%;
+	background: #f3f3f3;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px 50px 30px 50px;
+
+} 
+
+input{
+	width: 100%;
+	height: 30px;
+	font-size: 18;
+}
+
+ */
+.signup_wrap {
+	width: 500px;
+	height: auto;
+	margin: 0 auto;
+	padding: 10px;
+	background: #8a9d3d;
+	opacity: 0.8;
+}
+
+form {
+	border-radius: 0px 0px;
+	width: 100%;
+	height: 50%;
+	text-align: left;
+}
+
+.signup_wrap label {
+	font-size: 1em;
+}
+
+input[type="text"], [type="password"], [type="date"] {
+	width: 100%;
+	height: 50px;
+	line-height: 5em;
+	border: solid 1px;
+	border-color: #A4A4A4;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background: #fff;
+	font-size: 15px;
+}
+
+label {
+	margin: 0px 0 8px;
+	font-size: 14px;
+	font-weight: 700;
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	margin: 19px 0px 8px;
+	padding: 0px 0px 0px 10px;
+}
+
+input[type=submit] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background: #acb590;
+	color: #fff;
+	border: none;
+	position: relative;
+	height: 60px;
+	font-size: 1.6em;
+	padding: 0 2em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+}
+
+input[type=submit]:hover {
+	background: #fff;
+	color: #acb590;
+}
+
+/* 상단 메뉴바 css */
+.wrapper {
+	margin: 0 auto;
+	width: auto;
+}
+
+.top {
+	background-color: white;
+	position: realative;
+	left: 0;
+	padding: 0;
+	width: 100%;
+	height: 20px;
+	padding-top: 7px;
+}
+
+.top p {
+	font-size: 12px;
+	line-height: 20px;
+	background: #f5faf4;
+}
+
+.top p: hover {
+	color: #a8a8a8;
+}
+
+.top_menu {
+	display: inline;
+}
+
+.top_menu li {
+	display: inline-block;
+}
+
+.top_menu .login {
+	float: right;
+	padding-right: 20px;
+}
+
+.top_menu .login a p {
+	float: right;
+	color: #6b7457;
+}
+
+.top_menu .login:hover p {
+	color: darkgray;
+}
